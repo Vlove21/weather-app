@@ -8,9 +8,9 @@ function refreshInfo(response) {
   let cityName = response.data.city;
   let temp = response.data.temperature.current;
   let farenTemp = Math.round((temp * 9) / 5 + 32);
-  let country = response.country;
-  let humidity = Math.round(response.temperature.humidity);
-  let feelsLike = response.temperature.feels_like;
+  //let country = response.country;
+  //let humidity = Math.round(response.temperature.humidity);
+  // let feelsLike = response.temperature.feels_like;
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = cityName;
   let tempElement = document.querySelector("#city-temp");
