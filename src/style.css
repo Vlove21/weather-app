@@ -1,0 +1,45 @@
+body {
+  background: lightgreen;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.search-bar {
+  margin: 45px auto;
+}
+
+.weather-info {
+  max-width: 300px;
+  margin: 45px auto;
+  padding: 20px 30px;
+  border: black solid;
+  background-color: antiquewhite;
+}
+.city-name {
+  margin-top: 0px;
+  padding: 0px 50px;
+}
+
+.city-icon {
+  padding: 50px 100px;
+  font-size: 36px;
+}
+
+.city-temp {
+  padding: 50px 100px;
+  font-size: 45px;
+}
+
+.more-info {
+}
+
+.feels-like-line {
+}
+
+.wind-speed {
+}
+
+footer {
+}
