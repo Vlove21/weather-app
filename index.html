@@ -15,19 +15,21 @@
   <body>
     <h1>Welcome to the Weather App</h1>
     <header>
-      <form class="search-bar">
+      <form class="search-bar" id="search-bar">
         <input
           type="search"
           class="search-input"
           placeholder="Enter a city..."
           required
+
+          id="searched-city"
         />
         <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
     <div class="weather-info">
-      <h2 class="city-name">Washington DC</h2>
-      <span class="city-icon">⛅ </span>
+      <h2 class="city-name" id="city" >Washington DC</h2>
+      <span class="city-icon" id="">⛅ </span>
       <br />
       <span class="city-temp">53° F</span>
 
@@ -51,5 +53,6 @@
       and website hosted on
       <a href="https://loveweather-app.netlify.app/" target="_blank">Netlify</a>
     </footer>
+    <script src="src/script.js"></script>
   </body>
 </html>
