@@ -14,10 +14,15 @@
   </head>
   <body>
     <h1>Welcome to the Weather App</h1>
-    <header class="search-bar">
-      <form action="">
-        <input type="search" placeholder="Entera city..." required />
-        <input type="submit" value="Search" />
+    <header>
+      <form class="search-bar">
+        <input
+          type="search"
+          class="search-input"
+          placeholder="Enter a city..."
+          required
+        />
+        <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
     <div class="weather-info">
@@ -25,10 +30,14 @@
       <span class="city-icon">⛅ </span>
       <br />
       <span class="city-temp">53° F</span>
-      <p class="more-info">
-       <span class="feels-like-line">Feels like: 46°</span> 
 
-        <br />
+      <div class="feels-like-line">Feels like: 46°</div>
+
+      <p class="more-info">
+        <span class="wind-info">
+          Wind: <span class="wind-speed"> 14 mph </span>
+          <span class="humidity-level"> Humidty: 10%</span>
+        </span>
       </p>
     </div>
     <footer>
