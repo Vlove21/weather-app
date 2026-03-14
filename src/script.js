@@ -9,7 +9,6 @@ function refreshInfo(response) {
   let temp = response.data.temperature.current;
   let farenTemp = Math.round((temp * 9) / 5 + 32);
   let country = response.country;
-  //let windSpeed = Math.round(response.wind.speed);
   let humidity = Math.round(response.temperature.humidity);
   let feelsLike = response.temperature.feels_like;
   let cityElement = document.querySelector("#city");
