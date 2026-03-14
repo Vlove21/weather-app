@@ -13,7 +13,9 @@
     />
   </head>
   <body>
-    <h1>Welcome to the Weather App</h1>
+    <div class="welcome">
+      <h1>Welcome to the Weather App</h1>
+    </div>
     <header>
       <form class="search-bar" id="search-bar">
         <input
@@ -21,24 +23,31 @@
           class="search-input"
           placeholder="Enter a city..."
           required
-
           id="searched-city"
         />
         <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
+    <div class="date">Saturday 3/14 5:27 PM</div>
     <div class="weather-info">
-      <h2 class="city-name" id="city" >Washington DC</h2>
-      <span class="city-icon" id="">⛅ </span>
+      <div class="country-info">
+        <span class="city-name" id="city">Washington DC</span>
+        <span class="country"> United States of America</span>
+      </div>
+      <span class="city-icon" id="weather-icon">⛅ </span>
       <br />
-      <span class="city-temp">53° F</span>
+      <span class="city-temp" id="city-temp">53° F</span>
 
-      <div class="feels-like-line">Feels like: 46°</div>
+      <div class="feels-like-line">
+        Feels like: <span id="actual-temp">46</span>°
+      </div>
 
       <p class="more-info">
         <span class="wind-info">
-          Wind: <span class="wind-speed"> 14 mph </span>
-          <span class="humidity-level"> Humidty: 10%</span>
+          Wind: <span class="wind-speed" id="wind-speed"> 14 </span>mph
+          <span class="humidity-level">
+            Humidty: <span id="humid">10</span>%</span
+          >
         </span>
       </p>
     </div>
