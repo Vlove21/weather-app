@@ -11,7 +11,9 @@ function refreshInfo(response) {
   let temp = response.data.temperature.current;
   let farenTemp = Math.round((temp * 9) / 5 + 32);
   let humidity = Math.round(response.data.temperature.humidity);
-  let feelsLike = Math.round(response.data.temperature.feels_like);
+  let feelsLike = Math.round(
+    (response.data.temperature.feels_like * 9) / 5 + 32,
+  );
   let windSpeed = Math.round(response.data.wind.speed);
   let date = new Date(response.data.time * 1000);
   let icon = `<img  src="${response.data.condition.icon_url}">`;
