@@ -63,6 +63,12 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 function inputCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#searched-city");
@@ -85,10 +91,10 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `<div class="Day">
-          <div class="forecast-date">Sun</div>
+          <div class="forecast-date">${formatDay(day.time)}</div>
           <img class="forecast-icon" src="${day.condition.icon_url}"/>
           <div class="forecast-temps">
-            <div class="forecast-temp">${Math.round((day.temperature.minimum * 9) / 5 + 32)}°</div>
+            <div class="forecast-temp"><strong>${Math.round((day.temperature.minimum * 9) / 5 + 32)}°</strong></div>
             <div class="forecast-temp">${Math.round((day.temperature.maximum * 9) / 5 + 32)}°</div>
           </div>
         </div>`;
