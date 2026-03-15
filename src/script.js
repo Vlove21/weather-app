@@ -68,8 +68,29 @@ function inputCity(event) {
 
   searchCity(city);
 }
+function displayForecast() {
+  let day = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let forecastHtml = "";
+
+  day.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="Day1">
+          <div class="forecast-date">${day}</div>
+          <div class="forecast-icon">☀️</div>
+          <div class="forecast-temps">
+            <div class="forecast-temp">34°</div>
+            <div class="forecast-temp">54°</div>
+          </div>
+        </div>`;
+  });
+
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
 
 let SearchFormInput = document.querySelector("#search-bar");
 SearchFormInput.addEventListener("submit", inputCity);
 
 searchCity("Washington");
+displayForecast();
