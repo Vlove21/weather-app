@@ -37,6 +37,8 @@ function refreshInfo(response) {
   windElement.innerHTML = windSpeed;
   feelsLikeElement.innerHTML = feelsLike;
   iconElement.innerHTML = icon;
+
+  getForecast(cityName);
 }
 
 //Converts time into date
@@ -68,7 +70,15 @@ function inputCity(event) {
 
   searchCity(city);
 }
-function displayForecast() {
+
+function getForecast(city) {
+  let apiKey = "4tba4782084a6foabae1d06b62316bcd";
+  let forecastApi = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+
+  axios.get(forecastApi).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data.daily[1].temperature.minimum);
   let day = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   let forecastHtml = "";
 
@@ -93,4 +103,3 @@ let SearchFormInput = document.querySelector("#search-bar");
 SearchFormInput.addEventListener("submit", inputCity);
 
 searchCity("Washington");
-displayForecast();
