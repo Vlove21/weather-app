@@ -5,8 +5,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(refreshInfo);
 }
 function refreshInfo(response) {
-  console.log(response.data);
-
   //All of the information to be refreshed
   let cityName = response.data.city;
   let countryName = response.data.country;
@@ -16,26 +14,27 @@ function refreshInfo(response) {
   let feelsLike = Math.round(response.data.temperature.feels_like);
   let windSpeed = Math.round(response.data.wind.speed);
   let date = new Date(response.data.time * 1000);
-  let icon = response.data.condition.icon_url;
+  let icon = `<img  src="${response.data.condition.icon_url}">`;
 
-  //Change the city, country, and Temp
+  //Selects the elements
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = cityName;
-  let tempElement = document.querySelector("#city-temp");
-  tempElement.innerHTML = farenTemp;
-  let countryElement = document.querySelector("#country");
-  countryElement.innerHTML = countryName;
-  let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(date);
-
-  //Changes the other infomartion
   let humidElement = document.querySelector("#humid");
-  humidElement.innerHTML = humidity;
+  let tempElement = document.querySelector("#city-temp");
   let windElement = document.querySelector("#wind-speed");
-  windElement.innerHTML = windSpeed;
+  let countryElement = document.querySelector("#country");
   let feelsLikeElement = document.querySelector("#actual-temp");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#weather-icon");
+
+  //Changes the HTML
+  cityElement.innerHTML = cityName;
+  countryElement.innerHTML = countryName;
+  humidElement.innerHTML = humidity;
+  tempElement.innerHTML = farenTemp;
+  dateElement.innerHTML = formatDate(date);
+  windElement.innerHTML = windSpeed;
   feelsLikeElement.innerHTML = feelsLike;
-  let iconElement = document.querySelector("weather icon");
+  iconElement.innerHTML = icon;
 }
 
 //Converts time into date

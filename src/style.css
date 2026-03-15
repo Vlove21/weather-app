@@ -64,8 +64,9 @@ body {
   margin: 0px;
 }
 .city-icon {
-  padding: 30px 80px 0px 100px;
-  font-size: 100px;
+  display: flex;
+  display: inline;
+  
 }
 
 .city-temp {
