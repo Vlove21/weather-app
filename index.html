@@ -17,7 +17,7 @@
     <div class="welcome">
       <h1>Welcome!</h1>
     </div>
-
+    <div class="weather-info">
     <header>
       <form class="search-bar" id="search-bar">
         <input
@@ -30,7 +30,7 @@
         <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
-    <div class="weather-info">
+    
       <div class="date" id="date"></div>
       <div class="weather-info-dets">
         <div class="date" id="date"></div>
@@ -55,10 +55,17 @@
               >
             </span>
           </p>
+          <br />
+          <div class="current-conditions" id="conditions">It is currently misty with a chance of rain</div>
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="clear"
+            class="clear-skies"
+          />
         </div>
         <div class="forecast" id="forecast"></div>
       </div>
-    </div>
+    </div></div>
     <footer>
       Coded by
 
