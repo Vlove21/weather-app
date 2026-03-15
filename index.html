@@ -15,8 +15,9 @@
   </head>
   <body>
     <div class="welcome">
-      <h1>Welcome to the Weather App</h1>
+      <h1>Welcome!</h1>
     </div>
+
     <header>
       <form class="search-bar" id="search-bar">
         <input
@@ -29,33 +30,35 @@
         <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
-    <div class="date" id="date"></div>
     <div class="weather-info">
-      <div class="main-weather-info">
-        <div class="country-info">
-          <span class="city-name" id="city"></span>
-          <span class="country" id="country"></span>
-        </div>
-        <div class="city-icon" id="weather-icon"></div>
-        <br />
-        <span class="city-temp"><span id="city-temp"></span>° F</span>
+      <div class="date" id="date"></div>
+      <div class="weather-info-dets">
+        <div class="date" id="date"></div>
+        <div class="main-weather-info">
+          <div class="country-info">
+            <span class="city-name" id="city"></span>
+            <span class="country" id="country"></span>
+          </div>
+          <div class="city-icon" id="weather-icon"></div>
+          <br />
+          <span class="city-temp"><span id="city-temp"></span>° F</span>
 
-        <div class="feels-like-line">
-          Feels like: <span id="actual-temp"></span>°
-        </div>
+          <div class="feels-like-line">
+            Feels like: <span id="actual-temp"></span>°
+          </div>
 
-        <p class="more-info">
-          <span class="wind-info">
-            Wind: <span class="wind-speed" id="wind-speed"> </span> mph
-            <span class="humidity-level">
-              Humidty: <span id="humid"></span>%</span
-            >
-          </span>
-        </p>
+          <p class="more-info">
+            <span class="wind-info">
+              Wind: <span class="wind-speed" id="wind-speed"> </span> mph
+              <span class="humidity-level">
+                Humidty: <span id="humid"></span>%</span
+              >
+            </span>
+          </p>
+        </div>
+        <div class="forecast" id="forecast"></div>
       </div>
-      <div class="forecast" id="forecast"></div>
     </div>
-
     <footer>
       Coded by
 
