@@ -37,7 +37,7 @@ strong {
   text-align: center;
   padding: 40px 0px 0px;
   margin: 0px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .weather-info {
   display: flex;
@@ -53,9 +53,11 @@ strong {
 }
 .main-weather-info {
   padding: 40px 10px 10px 40px;
-  border: #e9edc9 solid;
+  border: #c1cd66 solid;
   margin: auto;
   padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 .city-name {
   margin-top: 0px;
@@ -112,6 +114,7 @@ img.city-icon {
   justify-content: flex-end;
   border: purple dotted;
   padding: 10px;
+  border-radius: 10px;
 }
 .forecast-date {
   text-align: center;
@@ -144,13 +147,10 @@ footer {
   background-size: cover;
 }
 
-.rainy{
-    background-image: url("pics/rainy.jpg");
+.rainy {
+  background-image: url("pics/rainy.jpg");
 }
 
-.windy{
-    background-image: url("pics/windy.jpg");
+.windy {
+  background-image: url("pics/windy.jpg");
 }
-}
-
-
