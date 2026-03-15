@@ -29,15 +29,15 @@
         <input type="submit" class="search-button" value="Search" />
       </form>
     </header>
-    <div class="date" id ="date"></div>
+    <div class="date" id="date"></div>
     <div class="weather-info">
       <div class="country-info">
         <span class="city-name" id="city"></span>
         <span class="country" id="country"></span>
       </div>
-      <div class="city-icon" id="weather-icon"> </div>
+      <div class="city-icon" id="weather-icon"></div>
       <br />
-      <span class="city-temp" ><span id="city-temp"></span>° F</span></span>
+      <span class="city-temp"><span id="city-temp"></span>° F</span>
 
       <div class="feels-like-line">
         Feels like: <span id="actual-temp"></span>°
@@ -45,12 +45,21 @@
 
       <p class="more-info">
         <span class="wind-info">
-          Wind: <span class="wind-speed" id="wind-speed">  </span> mph
+          Wind: <span class="wind-speed" id="wind-speed"> </span> mph
           <span class="humidity-level">
             Humidty: <span id="humid"></span>%</span
           >
         </span>
       </p>
+
+      <div class="forecast">
+        <div class="forecast-date">Sun</div>
+        <div class="forecast-icon">☀️</div>
+        <div class="forecast-temps">
+          <div class="forecast-temp">34°</div>
+          <div class="forecast-temp">54°</div>
+        </div>
+      </div>
     </div>
     <footer>
       Coded by
@@ -61,7 +70,9 @@
         >Github</a
       >
       and website hosted on
-      <a href="https://lovesweather-app.netlify.app/" target="_blank">Netlify</a>
+      <a href="https://lovesweather-app.netlify.app/" target="_blank"
+        >Netlify</a
+      >
     </footer>
     <script src="src/script.js"></script>
   </body>

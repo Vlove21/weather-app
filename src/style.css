@@ -66,7 +66,6 @@ body {
 .city-icon {
   display: flex;
   display: inline;
-  
 }
 
 .city-temp {
@@ -91,6 +90,25 @@ body {
 
 .humidity-level {
   padding: 0px 10px;
+}
+.forecast-date {
+  text-align: center;
+  font-size: 25px;
+}
+.forecast-icon {
+  text-align: center;
+  font-size: 30px;
+}
+.forecast-temps {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.forecast-temp {
+  padding: 0px 5px;
+  font-size: 18px;
+  font-weight: 300;
+  color: blueviolet;
 }
 footer {
   text-align: center;
